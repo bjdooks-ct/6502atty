@@ -8,6 +8,8 @@ This is an initial commit as PCBs are off for manufacture and not been tested. T
 
 The ATmega is probably the easiest MCU to get and program which is 5V tolerant. The 1284P is the current choice as the smaller memory versions are not much cheaper.
 
+There is now a [photo album](https://photos.app.goo.gl/qwDDgCh3WiyMoqd4A) of the build on my google photos.
+
 ## Build notes for v1 rev1
 
 - The 100UF capacitors are 16mm long so trying 47uF, layout change?
@@ -19,6 +21,8 @@ The pull-up/pull-down resistors can be anywhere from 1K to 4K7, experiments with
 During test it was found that there seems to be a difference in operation dependong on how the PHi2 jumper is selected. If the PHI2O is used, we get proper operation but if CPU_CLK is seleted then the download code works but the code that is downloaded does not work.
 
 ## PCB updates (v1 rev2)
+
+The updates for the second PCB revision are mostly bug-fixes and to make the board smaller to try and get to the 10x10cm point that JLCPCB and others use for cheaper services. There may be in future a version with a few bits of surface mount, like moving to one of the USB capable Atmel devices and adding a direct USB port.
 
 - Added J12 to route ~WE signal to the PGM/~WE to allow SRAM
   - Also requires a R/!W signal gated with PHI2 high
@@ -36,14 +40,15 @@ During test it was found that there seems to be a difference in operation depend
 - Made PCB smaller, moved a few LEDs and things around to make this work
 - Dropped 1K series drive resistor for the crystal
   - ATMega will not start if this resistor is there
-
-TODO:
 - Serial converter is rotated 180deg to the actual unit
-- Recomendation for AVRisp is to use 10K on ATMega's nRESET, so changed
+- Recomendation for AVRisp is to use 10K on ATMega's nRESET, so changed for now
+  - See crystal series resistor notes.
 
 Currently unknown issues:
 - Firmware only works with PHI2 jumper on PHI2out
   - can't see any scoped difference between CPUclk and PHI2out
+
+
 
 # Firmware
 
