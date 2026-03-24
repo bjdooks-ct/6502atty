@@ -6,7 +6,7 @@ all:	$(TARGETS)
 
 %.th:	%.s
 	64tass -b -o $@.bin -L $@.dump $<
-	xxd -i  $@.bin  | sed -e '/unsigned int/d' -e 's/unsigned char/const unsigned char/g' -e 's/ =/ PROGMEM =/g' > $@
+	xxd -i -n $@ $@.bin | sed -e '/unsigned int/d' -e 's/unsigned char/const unsigned char/g' -e 's/ =/ PROGMEM =/g' > $@ || rm $@
 
 .PHONY: clean
 clean:
