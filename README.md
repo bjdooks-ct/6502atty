@@ -10,6 +10,8 @@ The ATmega is probably the easiest MCU to get and program which is 5V tolerant. 
 
 There is now a [photo album](https://photos.app.goo.gl/qwDDgCh3WiyMoqd4A) of the build on my google photos.
 
+The clock synchronisation logic is provided by U2A and U2B. U2B takes the PWM output from the ATMega and is used to both halve ti and make it a square wave. The /S input is used when the clock is high to stop any transition low (which would complete the 6502's cycle) which comes from the U2A flip-flop. U2A is triggered by an access to the ATMega and sets /CLOCK_STOP active to stop the 6502 clock until the /AT_ACK signal is active, resetting U2A and making /CLOCK_STOP inactive which then allows U2B to continue generating a clock for the 6502.
+
 ## Build notes for v1 rev1
 
 - The 100UF capacitors are 16mm long so trying 47uF, layout change?
@@ -43,6 +45,7 @@ The updates for the second PCB revision are mostly bug-fixes and to make the boa
 - Serial converter is rotated 180deg to the actual unit
 - Recomendation for AVRisp is to use 10K on ATMega's nRESET, so changed for now
   - See crystal series resistor notes.
+- Added silkscreen with major part info to help with production
 
 Currently unknown issues:
 - Firmware only works with PHI2 jumper on PHI2out
