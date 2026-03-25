@@ -5431,6 +5431,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 91.44 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "21490207-2ba0-4bcd-a17b-43d2f976203d")
+		(property "Reference" "C3"
+			(at 93.7641 39.4341 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "?"
+			(at 93.7641 41.8584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm"
+			(at 91.44 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 91.44 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "10ca50b0-03c8-4d2f-b8c7-ee8c137119f3")
+		)
+		(pin "1"
+			(uuid "a240e483-8964-453b-b3de-4a6672d07400")
+		)
+		(instances
+			(project "6502atty"
+				(path "/f612fa92-d5fa-4cb5-a666-c1c24e7cbb30/83b01514-6b56-4f3e-9a42-17260f217a5e"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
 		(at 242.57 142.24 0)
 		(mirror y)
@@ -7809,76 +7879,6 @@
 			(project "6502atty"
 				(path "/f612fa92-d5fa-4cb5-a666-c1c24e7cbb30/83b01514-6b56-4f3e-9a42-17260f217a5e"
 					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 91.44 40.64 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b1ee2fb0-7ce0-4a9c-b5cb-92bbe17039af")
-		(property "Reference" "C3"
-			(at 93.98 40.0112 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "~"
-			(at 93.98 41.9163 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.3mm_W1.9mm_P5.00mm"
-			(at 91.44 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 91.44 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 91.44 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9d6d231e-e125-46f2-aaa4-dee20c577ff2")
-		)
-		(pin "1"
-			(uuid "8df3cf1a-7773-49fc-a8e9-db3e3f41e41d")
-		)
-		(instances
-			(project "6502atty"
-				(path "/f612fa92-d5fa-4cb5-a666-c1c24e7cbb30/83b01514-6b56-4f3e-9a42-17260f217a5e"
-					(reference "C3")
 					(unit 1)
 				)
 			)
