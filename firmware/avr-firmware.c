@@ -151,7 +151,7 @@ BRK
 	0x00,
 };
 
-#include "target_asm/test_str.dh"
+#include "target_asm/test_str.th"
 
 static const unsigned char ramtest_code_read[] PROGMEM = {
 /*
@@ -169,14 +169,15 @@ BCC loop
 	0x90, 0xf8,
 };
 
-#if 0
+#if 1
 const unsigned char *download_ptr = download_code;
 unsigned download = sizeof(download_code);
 #endif
 
+#if 0
 const unsigned char *download_ptr = test_str_bin;
 unsigned download = sizeof(test_str_bin);
-
+#endif
 
 unsigned download_to = 0x800;
 
