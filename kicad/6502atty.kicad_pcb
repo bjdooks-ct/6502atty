@@ -28032,6 +28032,19 @@
 			)
 		)
 	)
+	(gr_text "74x138"
+		(at 52.5 96.3 0)
+		(layer "F.SilkS")
+		(uuid "162a82c0-62d2-4919-9255-eec60a7f64a0")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "VCC"
 		(at 38.5742 27.4826 270)
 		(layer "F.SilkS")
