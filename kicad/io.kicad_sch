@@ -9806,7 +9806,7 @@
 		(fields_autoplaced yes)
 		(uuid "eea7b8ee-e28e-4987-8733-2b511e989863")
 		(property "Reference" "RN1"
-			(at 139.7 110.7439 0)
+			(at 139.192 110.8018 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9814,8 +9814,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R_Network08"
-			(at 139.7 113.2839 0)
+		(property "Value" "4K7"
+			(at 139.192 113.2261 0)
 			(effects
 				(font
 					(size 1.27 1.27)
