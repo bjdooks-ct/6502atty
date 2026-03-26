@@ -6,6 +6,6 @@ The kicad project is under the "CERN Open Hardware Licence Version 2 - Strongly 
 
 The firmware code defaults to the "Apache License 2.0" (SPDX-License-Identifier: Apache-2.0)
 
-By defualt, everything else is CC-BY-SA-4.0
+Bee logo provided by Rob Kendric under CC-BY
 
-
+By default, everything else is CC-BY-SA-4.0

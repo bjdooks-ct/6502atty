@@ -61,3 +61,7 @@ The firmware is currently in development. To build, you will need at-least avr-g
 
 The original prototype version was built on a perfboard, and not released.
 
+# Notes
+
+Bee logo provided by Rob Kendrick
+
