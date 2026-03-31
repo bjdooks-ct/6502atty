@@ -50,6 +50,12 @@ The updates for the second PCB revision are mostly bug-fixes and to make the boa
 Currently unknown issues:
 - Firmware only works with PHI2 jumper on PHI2out
   - can't see any scoped difference between CPUclk and PHI2out
+  - possibly a rise-time on the clock with the 1K resistor in it
+
+To do for rev3:
+- fix hole positions
+- try and see if we can get a couple more mm off each axis
+- maybe add way of using last 2 leds on bar-graph
 
 
 
