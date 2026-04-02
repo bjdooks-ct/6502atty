@@ -52,12 +52,20 @@ Currently unknown issues:
   - can't see any scoped difference between CPUclk and PHI2out
   - possibly a rise-time on the clock with the 1K resistor in it
 
+## PCB updates (v1 rev3)
+
+This revision has minor updates for ease of assembly and a few minor annoyances over how the layout has come out, such as the mounting hole positions not being fully aligned.
+
+The changes are:
+
+- Made LEDs all the same orientation
+  - also changed D2's resistor to be on ground side to make routing nicer
+- Reduction in the x-size of the board by pushing control logic over
+
 To do for rev3:
 - fix hole positions
 - try and see if we can get a couple more mm off each axis
 - maybe add way of using last 2 leds on bar-graph
-
-
 
 # Firmware
 
