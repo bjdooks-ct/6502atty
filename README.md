@@ -61,11 +61,17 @@ The changes are:
 - Made LEDs all the same orientation
   - also changed D2's resistor to be on ground side to make routing nicer
 - Reduction in the x-size of the board by pushing control logic over
+- Changed ROM A13 to solder pad, probably ok to just have A13 on this pin
+- Used per-pin options on DIP to remove automatic ground ties
+  - manually added a single ground tie to those pads
+  - also made the keep-out a bit bigger to allow easier isolation cuts
 
 To do for rev3:
 - fix hole positions
 - try and see if we can get a couple more mm off each axis
 - maybe add way of using last 2 leds on bar-graph
+- do we really need to have pull-ups on nmi/irq lines
+  - atmega is always going to be needed unless you inject clk into gates
 
 # Firmware
 
