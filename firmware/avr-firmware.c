@@ -351,7 +351,7 @@ static void handle_dev_write(unsigned addr, unsigned data)
 		/* for now a quick test */
 		break;
 	case 0x1c:
-		pf("%c", data);
+		uart_putbyte(data);
 		break;
 	case 0x1d:
 		pf("%02x\n", data);
