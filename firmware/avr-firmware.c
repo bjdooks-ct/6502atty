@@ -151,7 +151,6 @@ BRK
 	0x00,
 };
 
-#include "target_asm/test_str.th"
 
 static const unsigned char ramtest_code_read[] PROGMEM = {
 /*
@@ -169,12 +168,28 @@ BCC loop
 	0x90, 0xf8,
 };
 
-#if 1
+#if 0
 const unsigned char *download_ptr = download_code;
 unsigned download = sizeof(download_code);
 #endif
 
+#if 1
+#include "target_asm/test_null.th"
+
+const unsigned char *download_ptr = test_null_bin;
+unsigned download = sizeof(test_null_bin);
+#endif
+
 #if 0
+#include "target_asm/test_inc.th"
+
+const unsigned char *download_ptr = test_inc_bin;
+unsigned download = sizeof(test_inc_bin);
+#endif
+
+#if 0
+#include "target_asm/test_str.th"
+
 const unsigned char *download_ptr = test_str_bin;
 unsigned download = sizeof(test_str_bin);
 #endif
@@ -315,7 +330,7 @@ static inline void handle_rom_read(unsigned addr)
 
 	}
 
-	if (1) {
+	if (0) {
 		pf("RR: A=%02x => %02x\n", addr, PORTA);
 	}
 }
@@ -325,6 +340,9 @@ static void handle_dev_write(unsigned addr, unsigned data)
 	unsigned tmp;
 
 	switch (addr) {
+	case 0x1b:
+		/* for now a quick test */
+		break;
 	case 0x1c:
 		pf("%c", data);
 		break;
