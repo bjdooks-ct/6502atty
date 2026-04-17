@@ -367,7 +367,7 @@ ISR(INT2_vect)
 	}
 
 	if (read) {
-		/* PC7 being 0 maens selelected as IO device */
+		/* PC7 being 0 means selelected as IO device */
 
 		if ((portc & (1 << 7)) == 0) {
 			pf("RD %02x = %02x C=%u\n", addr, rom[addr], count);
