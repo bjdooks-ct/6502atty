@@ -356,10 +356,8 @@ static void handle_dev_write(unsigned addr, unsigned data)
 ISR(INT2_vect)
 {
 	unsigned portc = PINC;
-	unsigned addr = portc >> 2;
+	unsigned addr = (portc >> 2) & 0x1f;
 	unsigned read = PINB & (1 << 1);
-
-	addr &= 0x1f;
 
 	if (0) {
 		pf("IR: A=%02x %c C=%02x (%c)\n",
