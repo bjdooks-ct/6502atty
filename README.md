@@ -65,13 +65,20 @@ The changes are:
 - Used per-pin options on DIP to remove automatic ground ties
   - manually added a single ground tie to those pads
   - also made the keep-out a bit bigger to allow easier isolation cuts
+- Made hole positions mostly consistent at edge of board
+- Got down to 100x100mm dimensions with a more shuffling
+
 
 To do for rev3:
-- fix hole positions
 - try and see if we can get a couple more mm off each axis
 - maybe add way of using last 2 leds on bar-graph
 - do we really need to have pull-ups on nmi/irq lines
   - atmega is always going to be needed unless you inject clk into gates
+- could we use a 74x574 as input buffer too
+  - if we tied ~OE and CP this would almost work, FF loaded on low-high
+    - so to read we would have to do two reads close together
+    - or bring the cpu clock to the same area
+  - would have to re-arrange the lines as well
 
 # Firmware
 
