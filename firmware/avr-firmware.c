@@ -342,6 +342,16 @@ static inline void handle_rom_read(unsigned addr)
 	}
 }
 
+/* device write handler
+ *
+ * register map is
+ *
+ * 0x1B		NULL register (IO cycle testing)
+ * 0x1C		Write data byte written to serial output
+ * 0x1D		Print hex representation of data written
+ * 0x1E		Debug print port
+ * 0x1F		Internal use (currently part of RAM test)
+ */
 static void handle_dev_write(unsigned addr, unsigned data)
 {
 	unsigned tmp;
