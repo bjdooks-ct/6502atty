@@ -1,6 +1,6 @@
 # Build file for target assembly fragments
 
-TARGETS=test_inc.th test_str.th
+TARGETS=test_inc.th test_str.th test_null.th
 
 all:	$(TARGETS)
 
