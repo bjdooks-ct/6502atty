@@ -461,6 +461,16 @@ int main(void)
 		rom[9] = download_to >> 8;
 	}
 
+	if (false) {
+		/* we can get around 2.0MHz output from this with around
+		 * 55-45% high low */
+		pf("Test pattern on LED\n");
+		while (true) {
+			set_pin(PIN_AT_LED, 0);
+			set_pin(PIN_AT_LED, 1);
+		}
+	}
+
 	_delay_ms(100);
 	pf("GO\n");
 
