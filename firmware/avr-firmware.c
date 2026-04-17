@@ -358,16 +358,13 @@ ISR(INT2_vect)
 	unsigned portc = PINC;
 	unsigned addr = (portc >> 2) & 0x1f;
 	unsigned read = PINB & (1 << 1);
+	unsigned is_rom = (portc & (1 << 7));
 
-	if (0) {
-		pf("IR: A=%02x %c C=%02x (%c)\n",
-		   addr, read ? 'R' : 'W', portc, (portc & (1<<7)) ? 'M' : 'P');
-	}
+	/* PB0 is high for read
+	 * PC7 being 0 means selelected as IO device */
 
 	if (read) {
-		/* PC7 being 0 means selelected as IO device */
-
-		if ((portc & (1 << 7)) == 0) {
+		if (!is_rom) {
 			pf("RD %02x = %02x C=%u\n", addr, rom[addr], count);
 		} else {
 			if (0 || (addr >= 0x1e) || dump_mem)
@@ -388,11 +385,10 @@ ISR(INT2_vect)
 		if (0)
 			pf("WR %02x %02x\n", addr, data);
 
-		if ((portc & (1 << 7)) == 0) {
+		if (!is_rom) {
 			handle_dev_write(addr, data);
 		} else {
 			pf("WR %02x %02x\n", addr, data);
-
 		}
 	}
 
