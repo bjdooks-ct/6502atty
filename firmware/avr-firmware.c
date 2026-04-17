@@ -30,14 +30,21 @@ const char build_info[] = "BUILD: " BUILD_TYPE "\n" \
 
 static void init_pwm(void)
 {
-	//TCCR2A = (2 << 4) /* OC2B = normal) */ | (2 << 0) /* CTC */;
-	//TCCR2B = (1); /* no prescaler */
-
 	TCCR2A = (2 << 4) | (1); /* for phase correct pwm */
-	TCCR2B = (1) | (1 << 3);
+	TCCR2B = (1) | (1 << 3);	/* no prescaler, phase correct */
 
-	OCR2A = 0x10;
-	OCR2B = 0x5;
+	/* note, we don't really need to be outputing a square pwm as
+	 * the second flip-flop in the timing circuit is going to make
+	 * the result square.
+	 */
+
+	/* OCR2a = 6, OCR2b = 2 => gives a cpu-freq around 768kHz
+	 * OCR2a = 4, OCR2b = 2 => gives a cpu-freq around 1.14MHz
+	 * OCR2a = 3, OCR2b = 1 => gives a cpu-freq around 1.53MHz
+	 * OCR2a = 2, OCR2b = 1 => gives a cpu-freq around 2.3MHz
+	 */
+	OCR2A = 4;
+	OCR2B = 1;
 }
 
 static unsigned char rom[32] = {
@@ -173,7 +180,7 @@ const unsigned char *download_ptr = download_code;
 unsigned download = sizeof(download_code);
 #endif
 
-#if 1
+#if 0
 #include "target_asm/test_null.th"
 
 const unsigned char *download_ptr = test_null_bin;
@@ -187,7 +194,7 @@ const unsigned char *download_ptr = test_inc_bin;
 unsigned download = sizeof(test_inc_bin);
 #endif
 
-#if 0
+#if 1
 #include "target_asm/test_str.th"
 
 const unsigned char *download_ptr = test_str_bin;
