@@ -1,2 +1,5 @@
 # ignore editor temporary files
 *~
+
+#  ignore kicad backups
+*~kicad/production/backups/*.zip
