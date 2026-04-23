@@ -69,6 +69,9 @@ The changes are:
 - Got down to 100x100mm dimensions with a more shuffling
 - Added header and resistors for last two LEDs on bargrapth
   - Hesader J13 and two resistors to VCC for these
+- Replaced input buffer U5 with 74x574
+  - Added IOCLK from PHI2
+  - Removed R26 as not needed
 
 To do for rev3:
 - do we really need to have pull-ups on nmi/irq lines
