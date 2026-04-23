@@ -1,5 +1,8 @@
 # ignore editor temporary files
 *~
 
+# ignore kicad lock files
+kicad/*.lck
+
 #  ignore kicad backups
 *~kicad/production/backups/*.zip
