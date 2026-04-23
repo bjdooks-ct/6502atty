@@ -5520,6 +5520,16 @@
 	)
 	(wire
 		(pts
+			(xy 223.52 55.88) (xy 231.14 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a97eaa4e-2fb7-4e62-9835-a6e764410782")
+	)
+	(wire
+		(pts
 			(xy 60.96 71.12) (xy 78.74 71.12)
 		)
 		(stroke
@@ -7067,6 +7077,16 @@
 			(justify left bottom)
 		)
 		(uuid "fa341140-1df0-4277-8880-8dffc4dbeaa2")
+	)
+	(label "PHI2"
+		(at 223.52 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fc05d024-dc6e-4238-a5d2-d19277155413")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -12570,6 +12590,16 @@
 		(pin "~{IO_OUT}" input
 			(at 231.14 63.5 180)
 			(uuid "c1c7a305-4b08-4607-8823-7fc6962b995f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "IOCLK" input
+			(at 231.14 55.88 180)
+			(uuid "7b9dcff0-8f11-44d4-9bcc-4fc450e69b6e")
 			(effects
 				(font
 					(size 1.27 1.27)
