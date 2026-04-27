@@ -72,15 +72,17 @@ The changes are:
 - Replaced input buffer U5 with 74x574
   - Added IOCLK from PHI2
   - Removed R26 as not needed
-
-To do for rev3:
-- do we really need to have pull-ups on nmi/irq lines
-  - atmega is always going to be needed unless you inject clk into gates
 - could we use a 74x574 as input buffer too
   - if we tied ~OE and CP this would almost work, FF loaded on low-high
-    - so to read we would have to do two reads close together
-    - or bring the cpu clock to the same area
-  - would have to re-arrange the lines as well
+  - decided to bring PHI2 to the 74x574 to load state before read
+  - device latches on low high and we need stable during the high clock phase
+- Minor updats to clearand and island removal on the power planes
+
+Processed the files and sent to JLCPCB, the manufacturing files commited in kicad/release3
+
+To do for rev4:
+- do we really need to have pull-ups on nmi/irq lines
+  - atmega is always going to be needed unless you inject clk into gates
 
 # Firmware
 
